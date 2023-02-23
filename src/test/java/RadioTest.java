@@ -147,6 +147,18 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(2);
+
+        radio.maxVol();
+
+        int expected = 3;
+        int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
   {
     Radio radio = new Radio();
 
@@ -262,7 +274,19 @@ public class RadioTest {
     {
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(0);
+        radio.setCurrentVolume(3);
+
+        radio.minVol();
+
+        int expected = 2;
+        int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(-1);
 
         radio.minVol();
 
@@ -303,6 +327,18 @@ public class RadioTest {
         radio.minVol();
 
         int expected = 1;
+        int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(0);
+
+        radio.minVol();
+
+        int expected = 0;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
