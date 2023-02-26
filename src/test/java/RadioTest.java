@@ -224,7 +224,7 @@ public class RadioTest {
 
         radio.maxVol();
 
-        int expected = 10;
+        int expected = 11;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -306,7 +306,7 @@ public class RadioTest {
     public void test24() {
         Radio radio = new Radio();
 
-        radio.setCurrentStation(10);
+        radio.setCurrentStation(100);
 
 
         int expected = 0;
