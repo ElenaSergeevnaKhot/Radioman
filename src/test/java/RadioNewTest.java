@@ -12,5 +12,5 @@ public class RadioNewTest {
         int expected = 15;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
-}
+    }
 }
